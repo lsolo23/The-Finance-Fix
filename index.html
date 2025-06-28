@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance-Growth Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- 🌙 Dark Mode Toggle -->
+<div style="text-align:right; padding: 10px;">
+  <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+</div>
+
+<header>
+  <div class="container">
+    <h1>Hello, I'm MELAT YOHANNES MEKONNEN 👋</h1>
+    <p>Welcome to My Website!</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <h2>🌸 About Me</h2>
+    <p>I’m a creative soul who loves coding, music, and late-night star watching. I built this site to share my work and ideas with the world.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2>💡 My Projects</h2>
+    <ul>
+      <li><strong>"The Finance-Growth Link (Levine Logic)"</strong> – Teaching Joseph Schumpeter – Finance Sparks Innovation with rap lyrics 🎤</li>
+      <li><strong>"The Power of One Loan (Yunus Vision)"</strong> – Ambient rap</li>
+    </ul>
+  </div>
+</section>
+
+<section id="library">
+  <div class="container">
+    <h2>📚 Library</h2>
+    <ul>
+      <li><a href="New folder/lesson1.pdf" download>Lesson 1 PDF</a></li>
+      <li><a href="New folder/notes.pdf" download>Class Notes</a></li>
+      <li><a href="New folder/QUIZ.pdf" download>Quiz PDF</a></li>
+    </ul>
+  </div>
+</section>
+<!-- 🔹 1. VIDEO LECTURE -->
+<section id="video-lecture">
+  <div class="container">
+    <h2>🎓 Video Lecture</h2>
+    <video width="100%" controls>
+      <source src="media/lecture.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<br><br>
+<!-- 🔹 2. WATCH ON YOUTUBE -->
+<section id="youtube">
+  <div class="container" style="padding: 20px; background-color: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 40px;">
+    <h2 style="color: #333; text-align: center;">📺 Watch on YouTube: Life & Hustle with Mel</h2>
+    
+    <div style="text-align: center; margin-top: 20px;">
+      <iframe width="90%" height="360"
+        src="https://www.youtube.com/embed/Xx6iq7bq0-A"
+        title="Life & Hustle with Mel"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="border-radius: 8px;">
+      </iframe>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="https://www.youtube.com/@Melat_Yohannes" target="_blank"
+         style="background-color: #e50914; color: white; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 6px; display: inline-block; font-size: 16px;">
+         🔗 Visit Full YouTube Channel
+      </a>
+    </div>
+  </div>
+</section>
+<!-- 🔹 Finance Music Playlist Section -->
+<section id="finance-music" style="padding: 40px 20px; background-color: #f9f9f9;">
+  <div class="container" style="max-width: 800px; margin: auto;">
+
+    <!-- 🎵 TOP BUTTONS -->
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h2 style="color: #222;">🎶 Finance Music Videos</h2>
+      <p style="color: #666;">Fun and educational rap videos on money, business, and success!</p>
+
+      <button onclick="updatePlayer(0)" style="background-color: #28a745; color: white; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 6px; margin: 5px;">
+        ▶️ Play First Song
+      </button>
+
+      <a href="video/voice-of-growth/" target="_blank"
+         style="background-color: #007BFF; color: white; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 6px; text-decoration: none; margin: 5px; display: inline-block;">
+        📁 Open Music Folder
+      </a>
+    </div>
+
+      <!-- 🎥 Video Player -->
+    <div style="text-align: center;">
+      <video id="musicPlayer" width="100%" controls style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+       <source id="videoSource" src="video/voice-of-growth/financial_development_flow_voice.mp4" type="video/mp4" /> 
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- 🎚 Playlist Dropdown and Navigation Buttons -->
+    <div style="text-align: center; margin-top: 20px;">
+      <label for="playlist" style="font-weight: bold; font-size: 16px;">Choose a song:</label><br>
+      <select id="playlist" style="padding: 10px; font-size: 16px; width: 90%; max-width: 400px;">
+        <option value="0">1. Financial Development Flow – Voice</option>
+        <option value="1">2. Produce and Cost Flow</option>
+        <option value="2">3. My Money and My Mindset</option>
+        <option value="3">4. Retire Young – FIRE On</option>
+        <option value="4">5. Wealth Warriors RISE</option>
+        <option value="5">6. Budgetnista</option>
+        <option value="6">7. Financial Literacy and Self-Development</option>
+      </select><br><br>
+      <button onclick="prevVideo()" style="padding: 10px 20px; margin-right: 10px;">⏮️ Previous</button>
+      <button onclick="nextVideo()" style="padding: 10px 20px;">⏭️ Next</button>
+    </div>
+
+    <!-- 📄 Lyrics or Description -->
+    <div id="videoDescription" style="margin-top: 30px; font-size: 15px; color: #444; text-align: center;">
+      <em>Lyrics or description will appear here...</em>
+    </div>
+
+  </div>
+</section>
+
+<!-- 🔧 JavaScript for Playlist -->
+<script>
+  const songs = [
+    {
+      file: "financial_development_flow_voice.mp4",
+      title: "Financial Development Flow – Voice",
+      description: "Learn the foundations of financial growth and money flow!"
+    },
+    {
+      file: "produce_and_cost_flow.mp4",
+      title: "Produce and Cost Flow",
+      description: "Understand how production and cost drive economics."
+    },
+    {
+      file: "my_money_and_my_mindset.mp4",
+      title: "My Money and My Mindset",
+      description: "Explore how mindset shapes your money habits!"
+    },
+    {
+      file: "retire_young_fire_on.mp4",
+      title: "Retire Young – FIRE On",
+      description: "Discover FIRE: Financial Independence, Retire Early."
+    },
+    {
+      file: "wealth_warriors_rise.mp4",
+      title: "Wealth Warriors RISE",
+      description: "Inspire young learners to rise as wealth warriors!"
+    },
+    {
+      file: "budgetnista.mp4",
+      title: "Budgetnista",
+      description: "A budgeting anthem to help manage your money wisely."
+    },
+    {
+      file: "financial_literacy_and_self_development.mp4",
+      title: "Financial Literacy and Self-Development",
+      description: "Grow smarter financially while building yourself!"
+    }
+  ];
+
+  const player = document.getElementById('musicPlayer');
+  const source = document.getElementById('videoSource');
+  const description = document.getElementById('videoDescription');
+  const playlist = document.getElementById('playlist');
+
+  function updatePlayer(index) {
+  const selectedSong = songs[index];
+  playlist.selectedIndex = index;
+  player.pause(); // Stop current video if any
+  source.src = "video/voice-of-growth/" + selectedSong.file;
+  videoDescription.innerText = selectedSong.description;
+  player.load();
+  player.play(); // Auto play new video
+}
+ playlist.addEventListener('change', () => {
+    const index = parseInt(playlist.value);
+    updatePlayer(index);
+  });
+
+  function nextVideo() {
+    let i = parseInt(playlist.value);
+    i = (i + 1) % songs.length;
+    updatePlayer(i);
+  }
+
+  function prevVideo() {
+    let i = parseInt(playlist.value);
+    i = (i - 1 + songs.length) % songs.length;
+    updatePlayer(i);
+  }
+
+  // Auto-play first song on load
+  updatePlayer(0);
+</script>
+
+<br><br>
+<!-- 🔹 4. JOIN A VIDEO MEETING -->
+<section id="meeting">
+  <div class="container">
+    <h2>📡 Join a Live Meeting</h2>
+    <iframe
+      src="https://meet.jit.si/YourMeetingRoom"
+      allow="camera; microphone"
+      style="width: 100%; height: 400px; border: none;">
+    </iframe>
+    <p><em>Note: You may be asked to allow access to your camera/mic for the meeting only.</em></p>
+  </div>
+</section>
+
+<section id="register">
+  <div class="auth-container">
+    <div class="form-box">
+      <h3>🔐 Student Login</h3>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginStatus"></p>
+    </div>
+
+    <div class="form-box">
+      <h3>📝 Register</h3>
+      <form id="registerForm">
+        <input type="text" id="registerName" placeholder="Name" required />
+        <input type="email" id="registerEmail" placeholder="Email" required />
+        <input type="password" id="registerPassword" placeholder="Password" required />
+        <button type="submit">Register</button>
+      </form>
+      <p id="registerStatus"></p>
+    </div>
+  </div>
+</section>
+
+<section id="dashboard" style="display:none;">
+  <div class="container">
+    <h2>👋 Welcome, <span id="userName">User</span></h2>
+    <p>Email: <span id="userEmail"></span></p>
+    <button onclick="logout()">🚪 Logout</button>
+  </div>
+</section>
+
+<section id="notepad">
+  <div class="container">
+    <h2>✍️ My Notes</h2>
+    <div class="note-actions">
+      <button onclick="clearNotes()">🗑️ Clear Notes</button>
+      <button onclick="downloadNotes()">💾 Download Notes</button>
+      <button onclick="toggleRichEditor()">🖋️ Rich Text Mode</button>
+      <textarea id="notes" rows="10" cols="50" placeholder="Write your notes here..."></textarea>
+      <div id="richEditor" contenteditable="true" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="container">
+    <h2>🧠 Quick Quiz</h2>
+    <form id="quizForm">
+      <div class="quiz-question">
+        <p><strong>1. Which of the following has historically had the highest rate of return over long periods of time?</strong></p>
+        <label><input type="radio" name="q1" value="a" /> Bonds</label>
+        <label><input type="radio" name="q1" value="b" /> Stocks</label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<section id="payment">
+  <div class="container">
+    <h2>💳 Support or Pay</h2>
+    <p>If you find this helpful, you can support me with a donation:</p>
+    <div id="paypal-button-container"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>📬 Contact Me</h2>
+    <p>Email: yeyohannesmelat367@gmail.com</p>
+  </div>
+</section>
+
+<footer>
+  <p>Made with 💖 by MELAT YOHANNES MEKONNEN</p>
+  <div style="margin-top: 20px;">
+    <a href="https://www.youtube.com/@Melat_Yohannes" target="_blank" style="font-size: 18px; color: white;">Visit My YouTube Channel</a><br><br>
+    <a href="https://www.youtube.com/@Melat_Yohannes" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="40">
+    </a>
+  </div>
+</footer>
+
+<!-- Firebase SDKs -->
+<!-- ✅ These are the **compat SDKs**, which support the old firebase.XXX style -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey"AIzaSyA6oxbPx3SLg8rW24FEPK6ytaj788ixl58", // Replace with your actual key
+    authDomain: "the-finance-growth.firebaseapp.com",
+    databaseURL: "https://the-finance-growth.firebaseio.com",
+    projectId: "the-finance-growth",
+    storageBucket: "the-finance-growth.appspot.com",
+    messagingSenderId: "1234567890",
+    appId: "1:1234567890:web:abcdefg12345"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.database();
+</script>
+
+<!-- App Logic -->
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    console.log("🔥 DOM fully loaded, script running...");
+    
+    const registerForm = document.getElementById("registerForm");
+    const registerStatus = document.getElementById("registerStatus");
+    const loginForm = document.getElementById("loginForm");
+    const loginStatus = document.getElementById("loginStatus");
+    const dashboard = document.getElementById("dashboard");
+    const userName = document.getElementById("userName");
+    const userEmail = document.getElementById("userEmail");
+
+    registerForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("registerName").value.trim();
+      const email = document.getElementById("registerEmail").value.trim();
+      const password = document.getElementById("registerPassword").value;
+
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          db.ref("users/" + user.uid).set({ name, email });
+          registerStatus.textContent = "✅ Registration successful!";
+          registerForm.reset();
+        })
+        .catch((error) => {
+          registerStatus.textContent = "❌ Error: " + error.message;
+        });
+    });
+
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+          loginStatus.textContent = "✅ Login successful!";
+          loginForm.reset();
+        })
+        .catch((error) => {
+          loginStatus.textContent = "❌ " + error.message;
+        });
+    });
+
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        dashboard.style.display = "block";
+        db.ref("users/" + user.uid).once("value").then((snapshot) => {
+          const data = snapshot.val();
+          userName.textContent = data.name || "Student";
+          userEmail.textContent = data.email || user.email;
+        });
+      } else {
+        dashboard.style.display = "none";
+      }
+    });
+
+    window.logout = function () {
+      auth.signOut().then(() => alert("👋 Logged out."));
+    };
+
+    // Quiz logic
+    document.querySelector('#quizForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const selected = document.querySelector('input[name="q1"]:checked');
+      if (!selected) return alert("Please select an answer.");
+      alert(selected.value === "b" ? "✅ Correct! Stocks." : "❌ Incorrect. Try again!");
+    });
+
+    // Notes logic
+    const notesTextArea = document.getElementById("notes");
+    const richEditor = document.getElementById("richEditor");
+    let usingRichText = false;
+
+    notesTextArea.value = localStorage.getItem("myNotes") || "";
+    richEditor.innerHTML = localStorage.getItem("myNotesRich") || "";
+
+    notesTextArea.addEventListener("input", () => localStorage.setItem("myNotes", notesTextArea.value));
+    richEditor.addEventListener("input", () => localStorage.setItem("myNotesRich", richEditor.innerHTML));
+
+    window.clearNotes = function () {
+      if (usingRichText) {
+        richEditor.innerHTML = "";
+        localStorage.removeItem("myNotesRich");
+      } else {
+        notesTextArea.value = "";
+        localStorage.removeItem("myNotes");
+      }
+    };
+
+    window.downloadNotes = function () {
+      const text = usingRichText ? richEditor.innerText : notesTextArea.value;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "MyNotes.txt";
+      link.click();
+      URL.revokeObjectURL(url);
+    };
+
+    window.toggleRichEditor = function () {
+      usingRichText = !usingRichText;
+      notesTextArea.style.display = usingRichText ? "none" : "block";
+      richEditor.style.display = usingRichText ? "block" : "none";
+    };
+
+    // Dark mode
+    window.toggleDarkMode = function () {
+      document.body.classList.toggle("dark-mode");
+    };
+  });
+</script>
+
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AbcD123YourRealClientIDxyz"></script>
+<script>
+  window.addEventListener('load', () => {
+    if (window.paypal) {
+      paypal.Buttons().render('#paypal-button-container');
+    } else {
+      console.error("❌ PayPal SDK failed to load.");
+    }
+  });
+</script>
+
+</body>
+</html>
+
